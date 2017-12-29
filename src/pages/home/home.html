@@ -1,14 +1,31 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="mobicolor">
     <ion-title>
-      Ionic Blank
+      MobiStore
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  <p class="app-caption">
+      {{labels.textLabels.home.caption}}
   </p>
+  <ion-card class="intro-container">
+    <ion-card-header>
+      {{labels.textLabels.home.startupLabel}}
+    </ion-card-header>
+    <ion-card-content>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <button ion-button color="mobicolor" (click)="showLoginForm()">Login!</button>
+          </ion-col>
+          <ion-col col-6>
+            <button ion-button color="mobicolor">Signup</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
