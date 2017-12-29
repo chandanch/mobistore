@@ -9,12 +9,14 @@ import { HomePage } from '../pages/home/home';
 import { LoginComponent } from './../components/login/login';
 import { Labels } from './../utilities/labels';
 import { LoginModal } from './../pages/login-modal/login-modal';
+import { SignupModalPage } from '../pages/signup-modal/signup-modal';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginModal
+    LoginModal,
+    SignupModalPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { LoginModal } from './../pages/login-modal/login-modal';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginModal
+    LoginModal,
+    SignupModalPage
   ],
   providers: [
     StatusBar,
