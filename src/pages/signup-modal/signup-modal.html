@@ -39,9 +39,9 @@
       </ion-item>
     </ion-list>
   </form>
-  <div class="email-container" *ngIf="signupForm.value.email != null">
+  <!-- <div class="email-container" *ngIf="signupForm.value.email != null">
     <span>{{signupForm.value.email}}</span>
-  </div> 
+  </div>  -->
   <button ion-button color="mobicolor" type="submit" (click)="submit(signupForm.value)" block outline [disabled]="!signupForm.valid">Signup!</button>
 
 </ion-content>

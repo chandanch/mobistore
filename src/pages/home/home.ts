@@ -12,6 +12,7 @@ import { SignupModalPage } from './../signup-modal/signup-modal';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
   constructor(public navCtrl: NavController, 
