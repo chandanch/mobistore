@@ -47,7 +47,7 @@ export class PhonelistPage {
   }
 
   signout() {
-    // first show prompt to the user for signout
+    // first show prompt to the user for signout 
     let signoutAlert = this.alertController.create({
       title: 'User Signout',
       message: 'Are you sure you want to signout?',

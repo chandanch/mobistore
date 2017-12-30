@@ -1,6 +1,6 @@
 {
   "name": "MobiStore",
-  "app_id": "",
+  "app_id": "a06c32f2",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

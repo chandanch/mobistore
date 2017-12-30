@@ -29,7 +29,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-fab bottom center>
+  <ion-fab bottom right>
     <button ion-fab color="mobicolor"><ion-icon name="share"></ion-icon></button>
     <ion-fab-list  side="top">
       <button ion-fab >
@@ -42,6 +42,11 @@
        <ion-icon name="logo-youtube" color="youtubeLogoColor"></ion-icon> 
      </button>
     </ion-fab-list>
+  </ion-fab>
+  <ion-fab bottom left>
+    <button ion-fab color="mobicolor" (click)="showActionSheet()">
+      <ion-icon name="cog"></ion-icon>
+    </button>
   </ion-fab>
   <div class="footer">
     <p>MobiStore</p>

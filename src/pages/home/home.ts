@@ -7,6 +7,7 @@ import { ModalController } from 'ionic-angular';
 import { LoginModal } from './../login-modal/login-modal';
 import { Labels } from './../../utilities/labels'; 
 import { SignupModalPage } from './../signup-modal/signup-modal';
+import { ActionSheetController } from 'ionic-angular/components/action-sheet/action-sheet-controller';
 
 @Component({
   selector: 'page-home',
@@ -16,7 +17,8 @@ import { SignupModalPage } from './../signup-modal/signup-modal';
 export class HomePage {
 
   constructor(public navCtrl: NavController, 
-              public labels: Labels, 
+              public labels: Labels,
+              private actionSheetController: ActionSheetController,
               private modalController: ModalController) {
   }
 
@@ -28,6 +30,31 @@ export class HomePage {
   showSignupForm() {
     let signupModal = this.modalController.create(SignupModalPage);
     signupModal.present();
+  }
+
+  showActionSheet() {
+    let actionSheet = this.actionSheetController.create({
+      title: 'Set your app',
+      buttons: [
+        {
+          text: 'Change theme',
+          icon: 'shirt'
+        },
+        {
+          text: 'Dark mode',
+          icon: 'moon'
+        },
+        {
+          text: 'Light mode',
+          icon: 'sunny'
+        },
+        {
+          text: 'Cancel',
+          role: 'destructive'
+        }
+      ]
+    })
+    actionSheet.present();
   }
 
 }
