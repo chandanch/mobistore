@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import * as firebase from "firebase";
@@ -23,8 +22,7 @@ export class PhonelistPage {
 
   public phoneList;
 
-  constructor(public navCtrl: NavController, 
-    private http: HttpClient,
+  constructor(public navCtrl: NavController,
     private httpService: HttpService,
     private alertController: AlertController,
     private loadingController: LoadingController,

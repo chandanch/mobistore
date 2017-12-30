@@ -34,7 +34,7 @@ import { enviornment } from './../enviornment/enviornment';
     ReactiveFormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(enviornment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
