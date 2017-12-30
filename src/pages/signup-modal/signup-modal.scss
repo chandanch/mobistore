@@ -12,3 +12,12 @@ $margin: 14px;
 .email-container span {
     color: $color; 
 }
+
+@function increase-width($width) {
+    @return $width + 22;
+}
+
+div[withder] {
+    width: increase-width(12px) !important;
+    border: 2px solid gold;
+}

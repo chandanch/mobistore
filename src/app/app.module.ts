@@ -18,6 +18,7 @@ import { SignupModalPage } from '../pages/signup-modal/signup-modal';
 import { ToastServiceProvider } from '../providers/toast-service/toast-service';
 import { HttpClientModule } from '@angular/common/http';
 import { enviornment } from './../enviornment/enviornment';
+import { TextResourceProvider } from '../providers/text-resource/text-resource';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { enviornment } from './../enviornment/enviornment';
     SplashScreen,
     Labels,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ToastServiceProvider
+    ToastServiceProvider,
+    TextResourceProvider
   ]
 })
 export class AppModule {

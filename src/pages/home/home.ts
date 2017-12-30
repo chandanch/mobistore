@@ -6,6 +6,7 @@ import { LoginModal } from './../login-modal/login-modal';
 import { Labels } from './../../utilities/labels'; 
 import { SignupModalPage } from './../signup-modal/signup-modal';
 import { ActionSheetController } from 'ionic-angular/components/action-sheet/action-sheet-controller';
+import { TextResourceProvider } from '../../providers/text-resource/text-resource';
 
 @Component({
   selector: 'page-home',
@@ -17,7 +18,9 @@ export class HomePage {
   constructor(public navCtrl: NavController, 
               public labels: Labels,
               private actionSheetController: ActionSheetController,
-              private modalController: ModalController) {
+              private modalController: ModalController,
+              private textResource: TextResourceProvider) {
+                console.log('Text', this.textResource.textHeadings.signout);
   }
 
   showLoginForm() {
