@@ -17,17 +17,31 @@
      Signup or Login now! 
     </ion-card-header>
     <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col col-6>
-            <button ion-button color="mobicolor" (click)="showLoginForm()">Login!</button>
-          </ion-col>
-          <ion-col col-6>
-            <button ion-button color="mobicolor" (click)="showSignupForm()">Signup</button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <div>
+        <h3>Existing user: Login now!</h3>
+        <button ion-button color="mobicolor" block (click)="showLoginForm()">Login!</button>
+      </div>
+      <br>
+      <div>
+        <h3>New User: Signup now!</h3>
+        <button ion-button color="mobicolor" block (click)="showSignupForm()">Signup</button>
+      </div>
     </ion-card-content>
   </ion-card>
+
+  <ion-fab bottom center>
+    <button ion-fab color="mobicolor"><ion-icon name="share"></ion-icon></button>
+    <ion-fab-list  side="top">
+      <button ion-fab >
+        <ion-icon name="logo-twitter" color="twiterLogoColor"></ion-icon>
+      </button>
+      <button ion-fab>
+        <ion-icon name="logo-facebook" color="facebookLogoColor"></ion-icon>
+      </button>
+     <button ion-fab>
+       <ion-icon name="logo-youtube" color="youtubeLogoColor"></ion-icon> 
+     </button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>

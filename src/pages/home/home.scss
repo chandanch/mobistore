@@ -1,14 +1,26 @@
 .home-page-content {
-    background: rgb(244, 244, 244)
+    background: #EDE7F6;
 }
 
 .intro-container {
     border-radius: 25px;
-    background: #FFFFFF
+    background: rgba(179, 157, 219, 0.336);
 }
 
 .app-caption {
     color: #387EF5;
     text-align: center;
     font-size: 1.5rem;
+}
+
+ion-card-content div button {
+    margin: 10px;
+    padding-top: 10px;  
+    padding-bottom: 10px;
+}
+
+div h3 {
+    text-align: center;
+    color: #000 !important;
+    font-weight: 800  !important;
 }

@@ -13,6 +13,12 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
   templateUrl: 'phonelist.html',
   providers: [HttpService]
 })
+
+/**
+ * @desc PhoneListPage
+ *  shows all the data in the form of the records and all 
+ * of it in the list
+ */
 export class PhonelistPage {
 
   public phoneList;
