@@ -14,7 +14,8 @@ import { Labels } from './../utilities/labels';
 import { LoginModal } from '../pages/login-modal/login-modal';
 import { SignupModalPage } from '../pages/signup-modal/signup-modal';
 import { ToastServiceProvider } from '../providers/toast-service/toast-service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 
 @NgModule({

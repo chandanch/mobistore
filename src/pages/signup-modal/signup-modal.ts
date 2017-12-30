@@ -31,8 +31,8 @@ export class SignupModalPage {
     private toastController: ToastController) {
     this.signupForm = this.fb.group({
       email:  [null, Validators.compose([Validators.required, Validators.email])],
-      password: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-      confirmPassword: [null, Validators.compose([Validators.required, Validators.minLength(3)])]
+      password: [null, Validators.compose([Validators.required, Validators.minLength(6)])],
+      confirmPassword: [null, Validators.compose([Validators.required, Validators.minLength(6)])]
     })
   }
 

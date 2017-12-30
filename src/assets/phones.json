@@ -24,5 +24,16 @@
         "name" : "Nexus 5S",
         "price" : "$280",
         "image" : "https://www.fixez.com/media/catalog/category/lg-optimus-l90.png"
+    },
+    {
+        "name" : "Nokia 6",
+        "price" : "$280",
+        "image" : "https://dl.myket.ir/imageresizing/icon/small/nokialauncher2017.nokia6launcher2017.nokia6launcher2017_f14f3de2-5e5c-43a8-a14b-103f8198f747_.png"
+    },
+    {
+        "name" : "Lenovo K8 note",
+        "price" : "$280",
+        "image" : "https://www.compareprix.in/images/resizeimages/product/128/Lenovo%20Vibe%20K5%20Note%2032%203%20GB%20RAM.jpeg"
     }
+    
 ]

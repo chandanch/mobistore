@@ -1,3 +1,14 @@
-page-signup-modal {
+@import "variables.scss";
 
+// variables
+$margin: 14px;
+
+
+.email-container {
+    border: none;
+    margin: $margin; 
+}
+
+.email-container span {
+    color: $color; 
 }

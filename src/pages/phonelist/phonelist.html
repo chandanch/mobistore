@@ -6,8 +6,11 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="mobicolor">
     <ion-title>phonelist</ion-title>
+    <ion-buttons end>
+      <button ion-button >Signout</button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -21,7 +24,7 @@
         </ion-thumbnail>
         <h2>{{phone.name}}</h2>
         <p>{{phone.price}}</p>
-        <button ion-button clear item-end>View</button>
+        <button ion-button clear item-end >Buy!</button>
       </ion-item>
     </ion-list>
 </ion-content>

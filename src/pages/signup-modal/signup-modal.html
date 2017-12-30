@@ -26,7 +26,7 @@
         <ion-label floating>Email</ion-label>
         <ion-input name="email" type="text" [formControl]="signupForm.controls['email']"></ion-input>
       </ion-item>
-      <span *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].hasError('touched')" style="color:red;">Password is required</span>
+      <div *ngIf="signupForm.controls['email'].hasError('required') && signupForm.controls['email'].hasError('touched')" style="color:red;">Password is required</div>
       <ion-item>
         <ion-label floating>Password</ion-label>
         <ion-input name="password" type="password" [formControl]="signupForm.controls['password']"></ion-input>
@@ -39,7 +39,9 @@
       </ion-item>
     </ion-list>
   </form>
-{{signupForm.value.email}}
+  <div class="email-container" *ngIf="signupForm.value.email != null">
+    <span>{{signupForm.value.email}}</span>
+  </div> 
   <button ion-button color="mobicolor" type="submit" (click)="submit(signupForm.value)" block outline [disabled]="!signupForm.valid">Signup!</button>
 
 </ion-content>

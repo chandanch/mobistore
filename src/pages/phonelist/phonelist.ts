@@ -2,16 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PhonelistPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HttpService } from '../../providers/http-service/http-service';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+
 
 @Component({
   selector: 'page-phonelist',
   templateUrl: 'phonelist.html',
+  providers: [HttpService]
 })
 export class PhonelistPage {
 
@@ -19,12 +17,19 @@ export class PhonelistPage {
 
   constructor(public navCtrl: NavController, 
     private http: HttpClient,
+    private httpService: HttpService,
+    private alertController: AlertController,
     public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PhonelistPage');
     this.loadData();
+    this.httpService.get('assets/phones.json').subscribe(
+      data => {
+        console.log('From service', data); 
+      }
+    )
   }
 
   loadData() {
