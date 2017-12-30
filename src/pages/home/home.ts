@@ -5,7 +5,7 @@ import { NavController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 
 import { LoginModal } from './../login-modal/login-modal';
-import { Labels } from './../../utilities/labels';
+import { Labels } from './../../utilities/labels'; 
 import { SignupModalPage } from './../signup-modal/signup-modal';
 
 @Component({
@@ -15,7 +15,7 @@ import { SignupModalPage } from './../signup-modal/signup-modal';
 export class HomePage {
 
   constructor(public navCtrl: NavController, 
-              private labels: Labels,
+              public labels: Labels, 
               private modalController: ModalController) {
   }
 

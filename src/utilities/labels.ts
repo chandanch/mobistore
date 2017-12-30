@@ -8,5 +8,4 @@ export class Labels {
             startupLabel: 'Get Started now!'
         }
     }
-
 }

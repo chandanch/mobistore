@@ -1,0 +1,28 @@
+[
+    {
+        "name" : "Samsung Galaxy note",
+        "price" : "$4000",
+        "image" : "https://mi2.rightinthebox.com/images/128x128/201611/zekrhl1478487792993.jpg"
+
+    },
+    {
+        "name" : "Moto G 4",
+        "price" : "$5000",
+        "image" : "https://www.compareprix.in/images/resizeimages/product/128/G4.jpg"
+    },
+    {
+        "name" : "Redmi note 4",
+        "price" : "$400",
+        "image" : "https://www.compareprix.in/images/resizeimages/product/128/xiaomi-redmi-4a-16-gb-with-2-gb-ram-large.jpeg?"
+    },
+    {
+        "name" : "Nexus 6",
+        "price" : "$800",
+        "image" : "https://tshop.r10s.com/d0a/7c1/07a1/533b/503e/5dc5/ad50/113ae787262c600c7376cd.jpg"
+    },
+    {
+        "name" : "Nexus 5S",
+        "price" : "$280",
+        "image" : "https://www.fixez.com/media/catalog/category/lg-optimus-l90.png"
+    }
+]
