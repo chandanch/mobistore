@@ -16,8 +16,6 @@ import { SignupModalPage } from '../pages/signup-modal/signup-modal';
 import { ToastServiceProvider } from '../providers/toast-service/toast-service';
 import { HttpClientModule } from '@angular/common/http'; 
 
-
-
 @NgModule({
   declarations: [
     MyApp,
@@ -31,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     IonicModule.forRoot(MyApp),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

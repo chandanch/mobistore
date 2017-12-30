@@ -18,12 +18,12 @@
 
 <ion-content padding>
   <ion-list>
-      <ion-item *ngFor="let phone of phoneList">
+      <ion-item *ngFor="let phone of phoneList" class="slide-in-both-ways">
         <ion-thumbnail item-start>
           <img src="{{phone.image}}">
         </ion-thumbnail>
-        <h2>{{phone.name}}</h2>
-        <p>{{phone.price}}</p>
+        <h2 class="slide-list-item">{{phone.name}}</h2>
+        <p class="slide-list-item">{{phone.price}}</p>
         <button ion-button clear item-end >Buy!</button>
       </ion-item>
     </ion-list>
