@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
-import * as firebase from "firebase";
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from "firebase/app";
 import { error } from '@firebase/database/dist/esm/src/core/util/util';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 
@@ -26,6 +27,7 @@ export class LoginModal {
     private loadingController: LoadingController,
     private toastService: ToastServiceProvider,
     private alertController: AlertController,
+    private firebaseAuth: AngularFireAuth,
     private viewController: ViewController) {
   }
 
@@ -43,7 +45,7 @@ export class LoginModal {
       content: 'Authenticating...'
     })
     this.loading.present().then(() => {
-      firebase.auth().signInAndRetrieveDataWithEmailAndPassword(email, password).then(
+      this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(
         success => {
           console.log('success');
           this.loading.dismiss().then(() => {

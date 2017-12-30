@@ -3,7 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 import {FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
-import * as firebase from "firebase";
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from "firebase/app";
 
 import { SignupModel } from './../../common/models/signup.model';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
@@ -28,6 +29,7 @@ export class SignupModalPage {
     private loadingController: LoadingController,
     private alertController: AlertController,
     private toastService: ToastServiceProvider,
+    private firebaseAuth: AngularFireAuth,
     private toastController: ToastController) {
     this.signupForm = this.fb.group({
       email:  [null, Validators.compose([Validators.required, Validators.email])],
@@ -65,7 +67,7 @@ export class SignupModalPage {
   }
 
   addUser(signupValue: SignupModel) {
-    firebase.auth().createUserWithEmailAndPassword(signupValue.email, signupValue.password).then(
+    this.firebaseAuth.auth.createUserWithEmailAndPassword(signupValue.email, signupValue.password).then(
       success => {
         console.log('Success');
         this.loading.dismiss().then(() => {

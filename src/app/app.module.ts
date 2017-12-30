@@ -1,3 +1,4 @@
+
 import { PhonelistPage } from './../pages/phonelist/phonelist';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,15 +7,17 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginComponent } from './../components/login/login';
 import { Labels } from './../utilities/labels';
 import { LoginModal } from '../pages/login-modal/login-modal';
 import { SignupModalPage } from '../pages/signup-modal/signup-modal';
 import { ToastServiceProvider } from '../providers/toast-service/toast-service';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { enviornment } from './../enviornment/enviornment';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(enviornment.firebase),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,4 +52,6 @@ import { HttpClientModule } from '@angular/common/http';
     ToastServiceProvider
   ]
 })
-export class AppModule {}
+export class AppModule {
+}
+
